@@ -1,0 +1,91 @@
+.videoArea {
+  position: relative;
+  /* Needed for absolute positioning of children */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pfpVideo {
+  width: 80%;
+  max-width: 1200px;
+  display: block;
+}
+
+.videoTextContainer {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  /* transform: translateX(-50%); */
+  width: 30%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  margin: 5px;
+  background: rgb(255, 255, 255);
+}
+
+.videoArticletitle {
+  margin: 0 0 0.5rem 0;
+  color: var(--orange);
+  font-size: 1rem;
+  font-weight: 600;
+  transition: ease-in-out 0.14s;
+  text-align: left;
+}
+
+.videoArticletitle:hover {
+  text-decoration: underline;
+}
+
+.videoArticledescp {
+  margin: 0;
+  transition: ease-in-out 0.14s;
+}
+
+.videoArticledescp:hover {
+  background-color: var(--orange);
+  color: #fff;
+}
+
+@media (max-width:720px) {
+  .videoTextContainer {
+    width: 20%;
+  }
+
+  .videoArticletitle {
+    font-size: 1rem;
+  }
+
+  .videoArticledescp {
+    font-size: 0.6rem;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+@media (max-width:500px) {
+  .videoTextContainer {
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(80% - 2rem);
+    text-align: center;
+    background: #ffffff50;
+    padding: 0 1rem;
+    margin: 0;
+  }
+
+  .videoArticletitle {
+    font-size: 1rem;
+  }
+
+  .videoArticledescp {
+    font-size: 0.6rem;
+    margin: 0;
+    padding: 0;
+  }
+
+}
