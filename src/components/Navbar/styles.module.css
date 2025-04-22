@@ -1,0 +1,147 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  max-width: 1500px;
+  gap: 5px;
+  margin: 20px 10px;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+}
+
+.navBtns,
+.navLinks,
+.saumyaBtn,
+.saumya,
+.navMenuBtn {
+  border-radius: 12px;
+}
+
+.navBtns,
+.navMenuBtn,
+.saumyaBtn {
+  width: 70px;
+  height: 70px;
+  background-color: var(--black);
+  border: none;
+  text-align: center;
+}
+
+.saumyaBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navMenuBtn,
+.saumya {
+  display: none;
+}
+
+.navLinks {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--black);
+  height: 70px;
+}
+
+.navBtns,
+.navLinks,
+.saumyaBtn,
+.saumya,
+.navMenuBtn,
+.navLinksBtns,
+.navMenuBtns {
+  color: #ffffff7e;
+  transition: ease-in-out 0.23s;
+}
+
+.navBtns:hover,
+.navLinks a:hover,
+.navMenu a:hover,
+.activeLink {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navBtns img,
+.navMenuBtn img {
+  filter: invert(100%);
+  width: 30px;
+  height: 30px;
+  opacity: 0.7;
+}
+
+.navMenu {
+  position: absolute;
+  left: 20px;
+  top: 92px;
+  background-color: var(--black);
+  height: calc(100vh - 180px);
+  width: calc(100% - 80px);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding: 40px 20px;
+  display: none;
+}
+
+.navMenu a {
+  color: #fff;
+}
+
+/* <<<<<<<<<<<<<<<<<MEDIA QUERRY>>>>>>>>>>>>>>>>>>>>> */
+@media (max-width: 530px) {
+
+  .saumyaBtn,
+  .navLinks a {
+    display: none;
+  }
+
+  .navMenuBtn,
+  .saumya {
+    display: block;
+  }
+
+  .navMenu {
+    display: flex;
+  }
+
+  .saumya {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: large;
+    text-align: center;
+  }
+
+  .nav {
+    gap: 0;
+    border-radius: 12px;
+    background-color: var(--black);
+  }
+
+  .navBtns,
+  .navLinks,
+  .saumyaBtn,
+  .saumya,
+  .navMenuBtn {
+    border-radius: 0;
+  }
+
+  .navBtns,
+  .navMenuBtn,
+  .saumyaBtn {
+    background-color: transparent;
+  }
+
+
+  .navLinks {
+    background-color: transparent;
+  }
+}
